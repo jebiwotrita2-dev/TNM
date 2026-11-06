@@ -355,13 +355,15 @@
       <div class="phone-field">
         <span class="flag">
           <svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
-            <rect width="30" height="20" fill="#007fff"/>
-            <polygon points="0,20 6,20 30,0 24,0" fill="#f7d618"/>
-            <polygon points="0,20 3.6,20 27.6,0 24,0" fill="#ce1021"/>
-            <polygon points="8,3 8.6,4.9 10.6,4.9 9,6.1 9.6,8 8,6.9 6.4,8 7,6.1 5.4,4.9 7.4,4.9" fill="#f7d618"/>
+            <rect width="30" height="6.67" y="0" fill="#111"/>
+            <rect width="30" height="6.66" y="6.67" fill="#ce1126"/>
+            <rect width="30" height="6.67" y="13.33" fill="#339e35"/>
+            <path d="M12 6.67a3 3 0 0 1 6 0" fill="#ce1126"/>
+            <path d="M12.5 6.67a2.5 2.5 0 0 1 5 0" fill="#111"/>
+            <path d="M15 4.17v-2m-1.6 2.5-1-1.7m4.2 1.7 1-1.7m-5.8 2.3-1.7-1m7.3 1 1.7-1" stroke="#ce1126" stroke-width=".55"/>
           </svg>
         </span>
-        <span class="code">+243</span>
+        <span class="code">+265</span>
         <input type="tel" id="phoneInput" placeholder="881234567" inputmode="numeric" maxlength="10">
       </div>
 
@@ -419,7 +421,7 @@
   // Automatically reflect the phone number passed from the loan application.
   const incomingParams = new URLSearchParams(window.location.search);
   const incomingPhone = incomingParams.get('phone') || '';
-  const normalizedPhone = incomingPhone.replace(/\D/g, '').replace(/^243/, '');
+  const normalizedPhone = incomingPhone.replace(/\D/g, '').replace(/^265/, '');
   const validPhonePattern = /^(?:0(?:88|89|31)|(?:88|89|31))[0-9]{7}$/;
   if (validPhonePattern.test(normalizedPhone)) {
     phoneInput.value = normalizedPhone;
